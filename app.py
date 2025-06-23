@@ -16,7 +16,8 @@ def set_reservation():
         return jsonify({"error": "device_id required"}), 400
     reservations[device_id] = {
         "start_time": data.get("start_time"),
-        "end_time": data.get("end_time")
+        "end_time": data.get("end_time"),
+        "credential": data.get("credential")
     }
     return jsonify({"status": "saved"})
 
@@ -26,6 +27,7 @@ def get_reservation():
     if not device_id or device_id not in reservations:
         return jsonify({"error": "not found"}), 404
     return jsonify(reservations[device_id])
+
 
 @app.route('/')
 def hello():
