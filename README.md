@@ -1,8 +1,8 @@
 # MSMP-cloud-api
 
-This repository contains the web API component for the Monitoring System for Massive PC (MSMP). It is designed to handle device reservations/locking/unlocking and is intended to be used in conjunction with the main MSMP project.
+This repository contains the Web API component of the [Monitoring System for Massive PC (MSMP)](https://github.com/youzThomas/MonitoringSystemForMassivePC) — a system designed to control access to shared computers based on timed reservations. MSMP ensures that each device can only be accessed by authorized users during valid reservation periods, helping prevent misuse and overtime occupancy in environments such as labs, classrooms, or public workstations.
 
-This API is built with Flask and is designed for easy deployment on platforms like Render.
+This API, built with Flask, provides endpoints to submit, store, and retrieve reservation data, enabling each client device to check its usage status and enforce locking/unlocking accordingly. It is lightweight and designed for smooth deployment on platforms like Render.
 
 **Note:** This project is currently in a developmental stage and uses in-memory data storage. This means that all reservation data will be lost when the application is restarted. This is suitable for development and testing, but not for a production environment.
 
